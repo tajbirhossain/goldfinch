@@ -6,10 +6,12 @@
     box-sizing: border-box;
     /* font-family: 'Caveat', cursive; */
     font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth;
 }
 body {
     background-color: #0a3333;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 ul li {
     list-style: none;
@@ -42,6 +44,9 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+header .container img {
+    width: 225px;
 }
 header .container .headerRight {
     display: flex;
@@ -164,6 +169,7 @@ header .container .headerRight button {
     margin: 0 50px;
 }
 .banner .container ul li img {
+    width: 26px;
     margin-right: 5px;
 }
 .banner .container ul li span {
@@ -236,7 +242,7 @@ header .container .headerRight button {
 .weDo .container .weDoContent .doContentTop {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 40px 0;
 }
@@ -249,6 +255,7 @@ header .container .headerRight button {
     align-items: center;
     opacity: .3;
     transition: .3s;
+    cursor: pointer;
 }
 .weDo .container .weDoContent .doContentTop .doContentTopSingle.active {
     opacity: 1;
@@ -257,6 +264,7 @@ header .container .headerRight button {
     opacity: 1;
 }
 .weDo .container .weDoContent .doContentTop .doContentTopSingle img {
+    width: 40px;
     margin-bottom: 15px;
 }
 .weDo .container .weDoContent .doContentTop .doContentTopSingle h3 {
@@ -384,6 +392,7 @@ header .container .headerRight button {
     margin-bottom: 20px;
 }
 .landLord .container .landLordWrap .singleLandLord:first-child .landLordInfo img {
+    width: 62px;
     margin-right: 10px;
 }
 .landLord .container .landLordWrap .singleLandLord:first-child .landLordInfo .landInfoRight {
@@ -397,6 +406,9 @@ header .container .headerRight button {
 .landLord .container .landLordWrap .singleLandLord:first-child .landLordInfo .landInfoRight span {
     font-size: 19px;
     margin-bottom: 5px;
+}
+.landLord .container .landLordWrap .singleLandLord:first-child .landLordInfo .landInfoRight img {
+    width: 140px;
 }
 
 
@@ -434,6 +446,13 @@ header .container .headerRight button {
     padding: 9px 13px;
     border-radius: 30px;
     background-color: #0f2c2d;
+}
+
+.landLord .container .landLordWrap .singleLandLord .landInfoTop img {
+    width: 62px;
+}
+.landLord .container .landLordWrap .singleLandLord .landInfoTop .landRating img {
+    width: 140px;
 }
 .landLord .container .landLordWrap .singleLandLord .landInfoTop .landRating span {
     font-size: 24px;
@@ -621,6 +640,7 @@ header .container .headerRight button {
     font-weight: 300;
 }
 .ourSecret .container .secretWrap .singleSecret ul li img {
+    width: 26px;
     margin-right: 8px;
 }
 /* ourSecret styles ends */
@@ -660,8 +680,25 @@ header .container .headerRight button {
     margin-bottom: 70px;
 }
 .replaces .container .replacesWrap img {
+    height: 40px;
     cursor: pointer;
     margin: 0 20px;
+}
+.replaces .container .replacesWrap img.excelImg {
+    height: 60px;
+}
+.replaces .container .replacesWrap img.sheetImg {
+    height: 100px;
+}
+.replaces .container .replacesWrap .formRep {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    & img {
+        margin-right: 5px;
+    }
 }
 .replaces .container .replacesdBuy {
     text-align: center;
@@ -854,10 +891,12 @@ header .container .headerRight button {
     padding: 0 5px;
 }
 .pricing .container .pricingWrap .pricingRight ul li img {
+    width: 26px;
     margin-right: 8px;
 }
 .pricing .container .pricingWrap .pricingRight ul li span {
     font-size: 24px;
+    margin-bottom: 0;
 }
 .pricing .container .pricingWrap .pricingRight button {
     width: calc(100% - 65px);
@@ -894,8 +933,15 @@ header .container .headerRight button {
     justify-content: space-between;
 }
 .trust .container .trustWrap img {
+    height: 30px;
     filter: grayscale(100);
 }
+/* .trust .container .trustWrap img:nth-child(2) {
+    height: 110px;
+}
+.trust .container .trustWrap img:nth-child(3) {
+    height: 120px;
+} */
 /* trust styles ends */
 
 
@@ -918,7 +964,9 @@ footer .container .footerTop .footerTopLeft {
     padding-right: 60px;
 }
 footer .container .footerTop .footerTopLeft img {
+    width: 258px;
     margin-bottom: 40px;
+    filter: brightness(100);
 }
 footer .container .footerTop .footerTopLeft p {
     font-size: 24px;
@@ -1001,7 +1049,7 @@ footer .container .footerBottom .footerBottomRight a {
 
 
 /* responsive starts */
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .container {
         max-width: 1000px;
     }
